@@ -5,7 +5,11 @@ html {
 body {
 	background-color: white;
 	margin: 0;
-	overflow: auto;
+.anchor {
+	display: block;
+	position: relative;
+	top: -100px;
+	visibility: hidden;
 }
 
 #logo {
