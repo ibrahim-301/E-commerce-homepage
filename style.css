@@ -168,16 +168,16 @@ nav ul a {
 	top: 0px;
 }
 .list-option:nth-child(2) {
-	top: 30px;
+	top: 50px;
 }
 .list-option:nth-child(3) {
-	top: 60px;
+	top: 100px;
 }
 .list-option:nth-child(4) {
-	top: 90px;
+	top: 150px;
 }
 .list-option:nth-child(5) {
-	top: 120px;
+	top: 200px;
 }
 
 .list-option {
