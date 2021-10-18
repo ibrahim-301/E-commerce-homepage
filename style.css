@@ -207,6 +207,12 @@ nav ul a {
 	border-bottom-left-radius: 50px;
 }
 
+.pImageCont {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .product-card img {
 	/* position: relative; */
 }
