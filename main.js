@@ -23,8 +23,8 @@ filterButtons.forEach(b => {
 				const animation = p.animate(
 					{
 						opacity: [0, 1],
-						scale: [0, 1],
-            rotate: ['180deg', '360deg']
+						scale: [0.5, 1],
+						// rotate: ['180deg', '360deg']
 					},
 					300
 				)
