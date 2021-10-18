@@ -38,6 +38,15 @@ nav {
 	z-index: 100;
 }
 
+#nav-cont {
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: row; */
+  
+}
+
 nav ul {
 	margin: 0;
 	padding: 0;
