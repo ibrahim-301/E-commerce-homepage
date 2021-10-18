@@ -29,7 +29,7 @@ filterButtons.forEach(b => {
 					300
 				)
 			} else {
-        p.style.display = 'none'
+				p.style.display = 'none'
 			}
 		})
 	}
@@ -59,3 +59,67 @@ window.addEventListener('touchstart', e => {
 		}
 	}
 })
+
+const showCaseImages = Object.values(
+	document.querySelectorAll('.show-case-image')
+)
+const showCaseLen = showCaseImages.length
+
+const showLeft = document.getElementById('showCaseLeft')
+showLeft.disabled = true
+
+const showRight = document.getElementById('showCaseRight')
+let currentIndex = 0
+showRight.onclick = () => {
+	currentIndex++
+	const currentImage = showCaseImages[currentIndex - 1]
+	const nextImage = showCaseImages[currentIndex]
+	const currentAnimation = currentImage.animate(
+		{
+			opacity: [1, 0],
+		},
+		100
+	)
+	currentAnimation.onfinish = () => {
+		currentImage.hidden = true
+		nextImage.hidden = false
+		nextImage.animate(
+			{
+				opacity: [0, 1],
+			},
+			300
+		)
+	}
+
+	if (showLeft.disabled) showLeft.disabled = false
+	if (currentIndex == showCaseLen - 1) {
+		showRight.disabled = true
+	}
+}
+
+showLeft.onclick = () => {
+	currentIndex--
+	const nextImage = showCaseImages[currentIndex]
+	const currentImage = showCaseImages[currentIndex + 1]
+	const currentAnimation = currentImage.animate(
+		{
+			opacity: [1, 0],
+		},
+		100
+	)
+	currentAnimation.onfinish = () => {
+		currentImage.hidden = true
+		nextImage.hidden = false
+		nextImage.animate(
+			{
+				opacity: [0, 1],
+			},
+			300
+		)
+	}
+
+	if (showRight.disabled) showRight.disabled = false
+	if (currentIndex == 0) {
+		showLeft.disabled = true
+	}
+}
