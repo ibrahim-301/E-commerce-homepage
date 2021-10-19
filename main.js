@@ -20,13 +20,9 @@ filterButtons.forEach(b => {
 		productCards.forEach(p => {
 			if (type == 'All' || p.getAttribute('p-type') == type) {
 				p.style.display = 'block'
-				const animation = p.animate(
-					{
-						opacity: [0, 1],
-						scale: [0.5, 1],
-					},
-					300
-				)
+				p.animate([{ transform: 'scale(0.3)' }, { transform: 'scale(1)' }], {
+					duration: 300,
+				})
 			} else {
 				p.style.display = 'none'
 			}
