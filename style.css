@@ -255,8 +255,6 @@ nav ul a:active {
 	margin: 0;
 }
 
-
-
 #scImages {
 	position: relative;
 	width: 356px;
@@ -281,9 +279,8 @@ nav ul a:active {
 
 #show-case img {
 	position: absolute;
-	/* width: 356px; */
 	width: 90vw;
-  max-width: 380px;
+	max-width: 380px;
 	right: 0;
 	border-bottom-left-radius: 50px;
 }
@@ -549,7 +546,7 @@ nav ul a:active {
 
 	#show-case img {
 		width: 650px;
-    max-width: unset;
+		max-width: unset;
 	}
 
 	#showcase-info h1 {
