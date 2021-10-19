@@ -1,3 +1,5 @@
+const menuIcon = document.getElementById('menu-icon')
+const navTabs = document.getElementById('nav-tabs')
 const filterOptions = document.getElementById('products-list-options')
 const filterMenu = document.getElementById('products-list-menu')
 filterMenu.onclick = () => {
@@ -33,10 +35,6 @@ filterButtons.forEach(b => {
 	}
 })
 
-const menuIcon = document.getElementById('menu-icon')
-const navTabs = document.getElementById('nav-tabs')
-// const navButton = document.getElementById('nav-button')
-
 window.addEventListener('touchstart', e => {
 	if (menuIcon.style.display != 'none') {
 		const clsName = e.target.getAttribute('class')
@@ -51,7 +49,6 @@ window.addEventListener('touchstart', e => {
 	if (filterOptions.style.display != 'none') {
 		const clsName = e.target.getAttribute('class')
 		const tag = e.target.tagName
-		// console.log({clsName, tag})
 		if (clsName != 'filterButton' && clsName != 'list-option') {
 			filterOptions.style.display = 'none'
 		}
