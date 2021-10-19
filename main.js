@@ -102,3 +102,25 @@ showLeft.onclick = () => {
 		showLeft.disabled = true
 	}
 }
+
+const productsSection = document.getElementById('products')
+const showcaseSection = document.getElementById('show-case')
+const bottomSection = document.getElementById('bottom')
+
+window.onload = () => animateSections()
+window.onscroll = () => animateSections()
+
+function animateSections(scrollClass) {
+	addScrollClass(productsSection, 'products-post-scroll', 400, 100)
+	addScrollClass(showcaseSection, 'showcase-post-scroll', 300, 0)
+	addScrollClass(bottomSection, 'bottom-post-scroll', 150, 0)
+}
+
+function addScrollClass(section, className, showOffset, hideOffset) {
+	const sectionHeight = section.getBoundingClientRect().top
+	if (sectionHeight <= window.innerHeight - showOffset) {
+		section.classList.add(className)
+	} else if (sectionHeight > window.innerHeight - hideOffset) {
+		section.classList.remove(className)
+	}
+}

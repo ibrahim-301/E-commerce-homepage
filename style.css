@@ -579,3 +579,36 @@ nav ul a:active {
 		padding: 0;
 	}
 }
+
+.products-pre-scroll {
+	opacity: 0;
+	transform: scaleX(0.5);
+	transition: opacity 500ms, transform 500ms;
+}
+
+.showcase-pre-scroll {
+	opacity: 0;
+	transform: translateX(-5px);
+	transition: transform 800ms, opacity 800ms;
+}
+
+.bottom-pre-scroll {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: transform 1000ms, opacity 1000ms;
+}
+
+.products-post-scroll {
+	opacity: 1;
+	transform: scaleX(1);
+}
+
+.showcase-post-scroll {
+	opacity: 1;
+	transform: translateX(5px);
+}
+
+.bottom-post-scroll {
+	opacity: 1;
+	transform: translateY(-20px);
+}
