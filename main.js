@@ -15,7 +15,10 @@ filterButtons.forEach(b => {
 	b.onclick = () => {
 		const type = b.textContent
 		productFilter.textContent = type
-		filterOptions.style.display = 'none'
+
+		filterButtons.forEach(v =>
+			v != b ? (v.style.color = '#4B4B4B80') : (b.style.color = '#4B4B4B')
+		)
 
 		productCards.forEach(p => {
 			if (type == 'All' || p.getAttribute('p-type') == type) {
