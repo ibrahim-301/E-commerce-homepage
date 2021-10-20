@@ -1,0 +1,4 @@
+# E-commerce-homepage
+A simple homepage for a modern interior furniture store.
+
+Built for the [I Design, You Build! - Frontend Challenge #3](https://dev.to/zernonia/i-design-you-build-frontend-challenge-3-gda)
